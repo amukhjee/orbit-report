@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.warning {
+    color:rgb(255, 230, 0);
+    font-style: italic;
+    font-weight: bold;
+}

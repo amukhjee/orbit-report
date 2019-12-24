@@ -12,4 +12,15 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.orbitType=orbitType;
     this.operational=operational;
 }
+
+shouldShowWarning() {
+    let showwarning:boolean=false;
+    if(this.type=='Space Debris'){
+        showwarning=true;
+    }
+    return showwarning;
+ }
 }
+
+
+
