@@ -13,7 +13,7 @@ export class OrbitCountsComponent implements OnInit {
 
   ngOnInit() {
   }
-  search(searchTerm: string){
+  countByType(searchTerm: string):number{
     let matchingSatellitestype: Satellite[] = [];
     searchTerm = searchTerm.toLowerCase();
     for(let i=0; i < this.satellites.length; i++) {
@@ -23,5 +23,17 @@ export class OrbitCountsComponent implements OnInit {
        }
     }
 return matchingSatellitestype.length;
+}
+
+countByorbitType(searchTerm: string):number{
+  let matchingSatellitesorbittype: Satellite[] = [];
+  searchTerm = searchTerm.toLowerCase();
+  for(let i=0; i < this.satellites.length; i++) {
+     let orbittype = this.satellites[i].orbitType.toLowerCase();
+     if (orbittype.indexOf(searchTerm) >= 0) {
+        matchingSatellitesorbittype.push(this.satellites[i]);
+     }
+  }
+return matchingSatellitesorbittype.length;
 }
 }
